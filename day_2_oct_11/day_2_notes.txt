@@ -1,0 +1,85 @@
+Softwares To be installed
+=========================
+1. Nodejs
+   https://nodejs.org/en/download/prebuilt-installer
+
+2. VS code (Editor)
+  https://code.visualstudio.com/download
+
+
+How to write a simple HTML program and run in browser
+=====================================================
+1. create a html file (abc.html) , add HTML code 
+2. add vscode extension to run html file
+   open in browser  / live server
+3. to run html file in browser, alt+b (OR) alt+shift+b
+
+
+
+Emmet
+=====
+1. !     HTML-5 Boilerplate code
+
+2. #div1{This is Div-1}
+   creates a div with id=div1 and content
+
+3. div.div2{This is div-2}
+   creates a div with class name div2
+
+4. button.btn.btn-primary.btn-lg{Primary Button}
+
+5. p*5{This is Paragraph-$}
+   creates 5 paragraphs with dynamic text
+
+6. table>tbody>tr*20>td*4{Data-$}
+   a table with 20 rows and 4 columns
+
+
+
+CSS
+==== 
+CSS - Casceding Style sheet
+-Styling the web applications
+
+1. inline : style attribute , element level
+2. internal : style tag , page level
+3. external : separate css file, application level 
+
+
+
+How to add css Code into html file
+==================================
+1. create a separate css file ( style_1.css)
+2. include that css file into html file 
+   <link rel="stylesheet" href="style_1.css">
+
+
+How to add Javascript code into an HTML file
+============================================
+Javascript can be included in 2 ways:
+1. internal :
+    a. <script></script>
+    b. can be included either in <head> or <body>
+    c. page level  (cann't re-use the javascript code in multiple html files)
+2. external : 
+    a. separate Javascript file 
+    b. can be included in <head> or <body>
+    c. application level
+
+
+What is the better place to include Javascript files?
+=====================================================
+Option-A   <head>
+option-B   <body>
+Ans : 
+-if a javascript file is not trying to access any DOM element, that javascript file can be included in <head>
+-If a javascript file is trying to access DOM elements, that javascript file shouldnot be included in <head>, should be included in <body>
+
+HTML-5
+======
+2 attributes got introduced for <script>
+a. async : This is a Boolean attribute indicating that the browser should, if possible, load the script asynchronously
+b. defer : This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed
+
+
+
