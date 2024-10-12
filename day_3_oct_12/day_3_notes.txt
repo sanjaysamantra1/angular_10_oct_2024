@@ -34,3 +34,8 @@ How to commit and push code changes
 How to bring updated code from remote repository to local Repository
 ====================================================================
 git pull
+
+
+To Learn more on git please follow the below URLs:
+1. https://cctc.cybbh.io/students/students/latest/OpNotes/git_about.html
+2. https://github.com/sanjaysamantra1/git_notes
