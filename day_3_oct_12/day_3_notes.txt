@@ -1,0 +1,28 @@
+GIT
+===
+-version control system
+
+Remote Repository : 
+    https://github.com/sanjaysamantra1/angular_10_oct_2024
+
+Local Repository : 
+    Every Developer will have Local Repository
+
+
+How to get remote repository code in local machine
+==================================================
+1. install git software
+   https://git-scm.com/downloads
+
+2. clone the project
+   git clone https://github.com/sanjaysamantra1/angular_10_oct_2024
+
+3. fatal: not a git repository
+   run 'git init' inside the folder
+ 
+
+How to commit and push code changes
+====================================
+1. git add <filename>
+   git add .
+
