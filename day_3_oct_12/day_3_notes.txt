@@ -26,3 +26,11 @@ How to commit and push code changes
 1. git add <filename>
    git add .
 
+2. git commit -m "commiting day3 changes"
+
+3. git push 
+
+
+How to bring updated code from remote repository to local Repository
+====================================================================
+git pull
