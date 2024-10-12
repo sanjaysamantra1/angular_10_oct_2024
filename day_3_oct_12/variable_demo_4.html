@@ -1,0 +1,24 @@
+<script>
+    var a = 10;
+    console.log('a value is ', a);
+
+    var a = 100;
+    console.log('a value is ', a);
+
+    let b = 20
+    console.log('b value is ', b);
+
+    // let b = 200; // Identifier 'b' has already been declared
+
+    let msg = 'Hellooooo';  // global scope
+    function test() {
+        let msg = 'Hiiiiiiiii'; // function scope
+        if (true) {
+            let msg = 'Good Morning'; // block scope
+            console.log('inside if block ', msg)
+        }
+        console.log('inside test function ', msg)
+    }
+    test();
+    console.log('in global scope ', msg)
+</script>

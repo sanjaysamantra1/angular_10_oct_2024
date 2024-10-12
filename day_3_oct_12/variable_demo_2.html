@@ -1,0 +1,25 @@
+<script>
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log('a value is ', a)
+    console.log('b value is ', b)
+    console.log('c value is ', c)
+    a = 15;
+    b = 25;
+    // c = 35; // Uncaught TypeError: Assignment to constant variable.
+    console.log('after change a value is ', a)
+    console.log('after change b value is ', b)
+    console.log('after change c value is ', c)
+
+    const cars = ['BMW', 'AUDI'];
+    cars.push('TOYOTA');
+    console.log(cars); // when a new value is added to array there is no change in the address
+    // elements can be pushed to array even if the array is declared with const
+    // cars = []; // a new array cann't be assigned to a const 
+
+    const user = { name: 'sanjay', age: 45 };
+    user.add = 'bangalore'; // can we add a new prop to the object - yes
+    console.log(user);
+    user = { name: 'ajit', add: 'USA' }; // can we assign a new object to user variables-NO
+</script>

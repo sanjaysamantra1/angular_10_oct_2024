@@ -39,3 +39,47 @@ git pull
 To Learn more on git please follow the below URLs:
 1. https://cctc.cybbh.io/students/students/latest/OpNotes/git_about.html
 2. https://github.com/sanjaysamantra1/git_notes
+
+
+
+
+
+Javascript Variables
+=====================
+-Variables in javascrip can be declared using the below 3 keywords
+   1. var
+   2. let
+   3. const
+
+
+
+      var						let						 const
+======================================================================
+1.since begining		    1.ECMASCRIPT-6(2015)		1.ECMASCRIPT-6(2015)
+2.value can be changed   2.value can be changed     2.cann't be changed
+3.initialization is		 3.initialization is		     3.mandatory
+	not mandatory           not mandatory	
+4.can be redeclared		 4.cann't be redeclared		   4.cann't be redeclared
+5.TDZ - No			 	 5.TDZ - Yes				         5.TDZ - Yes
+6.function/global		 6.block/function/global	6.block/function/global
+
+
+
+
+Javascript : it's a programming language , follows ECMASCRIPT standards
+ECMASCRIPT : it's a standard, followed by Javascript
+ECMA - European Computer Manufacturers Association
+
+ECMASCRIPT Versions
+===================
+<2015      ECMASCRIPT-5
+2015       ES-6  (let,const,for-of,for-in,class,extends,module,promise...)
+2016       ES-7  
+2017       ES-8
+2018       ES-9
+2019       ES-10
+2020       ES-11
+2021       ES-12
+2022       ES-13
+2023       ES-14
+2024       ES-15
