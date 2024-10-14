@@ -1,0 +1,32 @@
+<script>
+    // 'use strict'
+    var a = 10;
+    let b = 20;
+    const c = 30; // a,b,c are global variables
+    // Note : let & const type global variables are stored in script scope
+
+    function f1() {
+        var d = 40;
+        e = 50; // This is a global variable
+        console.log('f1 starts here')
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d); // yes
+        console.log(e); // yes
+        console.log('f1 ends here')
+    }
+    function f2() {
+        console.log('f2 starts here')
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        // console.log(d); // No , d is not defined
+        console.log(e);
+        console.log('f2 ends here')
+    }
+    f1();
+    f2();
+
+    // Note: when a variable is declared without var/let/cont, no matter where the variable is declared, its scope is global
+</script>

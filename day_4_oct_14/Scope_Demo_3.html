@@ -1,0 +1,17 @@
+<script>
+    function varTest() {
+        for (var i = 1; i <= 3; i++) { // block
+            console.log('Inside Loop ', i); // 1  2   3
+        }
+        console.log('outside Loop ', i); // 4
+    }
+    varTest();
+
+    function letTest() {
+        for (let i = 1; i <= 3; i++) { // block
+            console.log('Inside Loop ', i); // 1  2   3
+        }
+        console.log('outside Loop ', i); // 4
+    }
+    letTest();
+</script>

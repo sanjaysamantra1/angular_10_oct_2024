@@ -1,0 +1,27 @@
+<script>
+    // a. function declaration(Named Function)
+    // Function Hoisting
+    function add(a, b) {
+        console.log(a + b);
+    }
+    add(2, 3);
+    add(3, 4);
+
+    // b. function expression(Anonymous)
+    // Hoisting - No
+    var sub = function (a, b) {
+        console.log(a - b)
+    }
+    sub(20, 10);
+
+    // c. self invoked, to execute something on page load only 1 time
+    (function (a, b) {
+        console.log(a * b)
+    }(3, 5));
+
+    // d. arrow function (ES-6 2015)
+    var div = (a, b) => {
+        console.log(a / b)
+    }
+    div(20, 5);
+</script>

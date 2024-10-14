@@ -1,0 +1,22 @@
+<script>
+    function f1() {
+        if (true) {
+            var a = 10;
+            // even though a is declared inside a block, its scope is function
+            console.log('inside block ', a); // 10
+        }
+        console.log('inside function ', a); // 10
+    }
+    f1();
+    // if we declare any var variable inside block, its scope is not restricted to that block
+
+
+    function f2() {
+        if (true) {
+            let b = 20;
+            console.log('inside block ', b); // 20
+        }
+        console.log('outside block ', b); // No
+    }
+    f2();
+</script>
