@@ -1,0 +1,25 @@
+<script>
+    let user = {
+        firstName: 'Sachin',
+        lastName: 'Tendulkar',
+
+        fullName: function () {
+            console.log('fullName...', this);  // this = user
+            console.log(this.firstName + " " + this.lastName);
+
+            function f1() {
+                console.log('f1...', this); // this = window
+                console.log(this.firstName + " " + this.lastName)
+            }
+            f1();
+
+            let f2 = () => {
+                // arrow function uses this value from lexical scope
+                console.log('f2...', this);
+                console.log(this.firstName + " " + this.lastName)
+            }
+            f2();
+        }
+    }
+    user.fullName();
+</script>

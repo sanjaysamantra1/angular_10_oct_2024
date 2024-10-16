@@ -1,0 +1,16 @@
+<script>
+    let user = {
+        firstName: 'Sachin',
+        lastName: 'Tendulkar',
+        fullName1: function () {
+            console.log(this.firstName + " " + this.lastName);
+            // sachin tendulkar  (this = user)
+        },
+        fullName2: () => {
+            console.log(this.firstName + " " + this.lastName);
+            // this = window, 
+        }
+    }
+    user.fullName1();
+    user.fullName2();
+</script>

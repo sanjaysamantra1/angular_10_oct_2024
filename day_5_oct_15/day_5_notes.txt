@@ -1,0 +1,54 @@
+Regular Function
+================
+-'this' : How the function is called / From Where the function is called
+-'this' is dynamic, changes time to time
+
+
+
+Arrow Function (ES-6)
+=====================
+-Shorter syntax
+-implicit return 
+
+-'this' : where the function written
+-'this' : static , never changes
+
+
+Arrow Function Limitations
+==========================
+1. arrow function shouldn't be used as object methods.
+2. arrow function should not be used if 'this' has to be dynamic
+
+
+Arrow Function Benefits
+=======================
+1. arrow function should  be used if 'this' has to be static
+2. arrow function doesn't loose 'this' context when used as callbacks
+
+
+Assignments:
+============
+Q1. check if a value is present in the nested Object.
+    contains(input , sachin) // false
+    contains(input , 50) // true
+    let input = {
+        data : {
+            info : {
+                moreData: {
+                    b:{
+                        c:{
+                            d:{
+                                e:50,
+                                f : [],
+                                cars : ['tata','honda'],
+                                g:[]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+Q2. return all the keys whose value is empty array
+   output = [f , g]
