@@ -1,0 +1,24 @@
+<script>
+    let str = 'Hello World';
+
+    // how to check the length of a string
+    console.log(str.length); // 11
+    console.log(str.toUpperCase());
+    console.log(str.toLowerCase());
+
+    console.log(str.charAt(1)); // e
+    console.log(str[1]); // e
+    console.log(str.at(1)); // e
+
+    console.log(str.charAt(-1)); // fails when -ve index is passed
+    console.log(str[-1]); // fails when -ve index is passed
+    console.log(str.at(-1)); // works with both +ve and -ve index
+
+    console.log(str.charCodeAt(1)); // e = 101
+    console.log('sachin'.concat(' tendulkar'));
+
+    console.log(str.indexOf('l')); // 2
+    console.log(str.indexOf('l', 3)); // 3
+    console.log(str.lastIndexOf('l')); // 9
+    console.log(str.indexOf('m')); // -1
+</script>
