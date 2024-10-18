@@ -1,0 +1,39 @@
+<script>
+    let arr = [10, 20, 30, 40];
+    console.log(arr); // [10, 20, 30, 40]
+
+    arr.push(50);
+    console.log(arr); // [10, 20, 30, 40, 50]
+
+    arr.pop();
+    console.log(arr); // [10, 20, 30, 40]
+
+    arr.unshift(50);
+    console.log(arr); // [50,10, 20, 30, 40]
+
+    arr.shift();
+    console.log(arr); // [10, 20, 30, 40]
+
+    // splice(Index , #elements to remove , elements to insert)
+    arr.splice(1, 2, 25, 35); // [10, 25, 35, 40]  (Both Add And delete)
+    console.log(arr);
+
+    arr.splice(1, 2); // only delete
+    console.log(arr); // [10,40]
+
+    arr.splice(1, 0, 20, 30); // only insert
+    console.log(arr); // [10, 20, 30, 40]
+
+    let arr2 = arr.with(2, 35)
+    console.log(arr, arr2); // [10, 20, 35, 40]
+
+    console.log(arr.at(1)); // 20
+    console.log(arr.at(-1)); // 40
+    console.log(arr.at(10)); // undefined
+
+    console.log(arr.indexOf(20)); // 1
+    console.log(arr.indexOf(70)); // -1
+
+    console.log(arr.includes(20)) // true
+    console.log(arr.includes(26)) // false
+</script>

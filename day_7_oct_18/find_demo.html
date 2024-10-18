@@ -1,0 +1,32 @@
+<script>
+    let nums = [10, 20, 30, 40, 50]; // array of numbers
+    let cars = ['Tata', 'Honda']; // array of strings
+
+    let employees = [ // array of objects
+        { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
+        { eId: 104, name: 'geeta', sal: 8000, gender: 'female' },
+        { eId: 103, name: 'sameer', sal: 7000, gender: 'male' },
+        { eId: 102, name: 'sita', sal: 9000, gender: 'female' },
+        { eId: 105, name: 'deepak', sal: 8000, gender: 'male' }
+    ];
+
+    // find the first female employee 
+    let first_female_emp = employees.find((emp) => emp.gender === 'female');
+    console.log(first_female_emp);
+
+    // at whatt index the first female emp is present?
+    let first_female_emp_ind = employees.findIndex((emp) => emp.gender === 'female');
+    console.log(first_female_emp_ind);
+
+    // find the last female employee
+    let last_female_emp = employees.findLast((emp) => emp.gender === 'female');
+    console.log(last_female_emp);
+
+    // at whatt index the first female emp is present?
+    let last_female_emp_ind = employees.findLastIndex((emp) => emp.gender === 'female');
+    console.log(last_female_emp_ind);
+
+    // return all the female employees
+    let allfemale_emp = employees.filter((emp) => emp.gender === 'female');
+    console.log(allfemale_emp);
+</script>
