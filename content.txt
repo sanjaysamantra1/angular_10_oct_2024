@@ -7,8 +7,13 @@ functions
 Arrow function
 String
 Array
-Object
+class
+prototype
+call(),bind(),apply()
+Object Class
+Closure
 ES-6 and beyond
+Promise, Async-await
 
 
 

@@ -1,0 +1,24 @@
+<script>
+    let a = [];
+    let b = {};
+
+    console.log(typeof a); // object
+    console.log(typeof b); // object
+
+    console.log(Array.isArray(a)) // true
+    console.log(Array.isArray(b)) // false
+
+
+    function add() {
+        // arguments
+        // console.log(Array.isArray(arguments)) // not array
+        let sum = 0;
+        for (ele of arguments) {
+            sum = sum + ele;
+        }
+        console.log(sum);
+    }
+    add(2, 3) // 5
+    add(2, 3, 4, 5) // 14
+    add(2, 3, 4, 5, 6) // 20
+</script>

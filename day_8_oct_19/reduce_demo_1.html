@@ -1,0 +1,28 @@
+<script>
+    let arr = [10, 20, 30, 40, 50];
+    // reduce( CallBack , InitialValue )
+    let sum = arr.reduce((prev, curr) => {
+        console.log(prev, curr)
+        return prev + curr;
+    });
+    console.log(sum);
+
+    let str = 'Hello World';
+    let rev = str.split('').reduce((rev, curr) => {
+        return curr + rev;
+    }, '');
+    console.log(rev);
+
+
+    // character occurence
+    let myStr = 'entertainment';
+    let res = myStr.split('').reduce((charMap, char) => {
+        if (charMap[char]) {
+            charMap[char] = charMap[char] + 1;
+        } else {
+            charMap[char] = 1;
+        }
+        return charMap;
+    }, {});
+    console.log(res);
+</script>

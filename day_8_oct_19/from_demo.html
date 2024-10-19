@@ -1,0 +1,15 @@
+<script>
+    let arr = [10, 10, 20, 30, 10, 10, 10, 10, 30, 20, 20, 20];
+
+    let uniqueSet = new Set(arr);
+    console.log(uniqueSet); // uniqueSet is a set, its not an array
+    console.log(Array.isArray(uniqueSet));
+
+    let uniqueArr = Array.from(uniqueSet);
+    console.log(uniqueArr)
+    console.log(Array.isArray(uniqueArr));
+
+
+    let uniqueValues = [...new Set(arr)];
+    console.log(uniqueValues)
+</script>
