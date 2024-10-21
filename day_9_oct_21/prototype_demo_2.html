@@ -1,0 +1,14 @@
+<script>
+    let arr1 = [10, 101, 9, 102, 8];
+
+    arr1.sort();
+    console.log(arr1);
+
+    Array.prototype.numericSort = function () {
+        this.sort((a, b) => a - b)
+    }
+    // numericSort() can be used with any array instance
+
+    arr1.numericSort();
+    console.log(arr1);
+</script>

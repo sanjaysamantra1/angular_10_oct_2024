@@ -1,0 +1,11 @@
+<script>
+    let arr1 = [10, 20];
+    let arr2 = arr1; // Reference Copy (address copy)
+    arr2.push(30);
+    console.log(arr1, arr2);
+
+    let arr3 = [100, 200];
+    let arr4 = [...arr3]; // spread operator (value copy) shallow copy
+    arr4.push(300);
+    console.log(arr3, arr4); 
+</script>
