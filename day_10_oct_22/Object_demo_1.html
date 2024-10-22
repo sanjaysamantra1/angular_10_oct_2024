@@ -1,0 +1,25 @@
+<script>
+    let user = {
+        'firstName': 'Sachin',
+        'last name': 'Tendulkar',
+        'age': 40,
+        'address': 'bangalore',
+    }
+    // how to check length of an object
+    console.log(Object.keys(user).length); // 3
+
+    // how to access object properties
+    console.log(user.name); // sanjay  (dot notation)
+    console.log(user['age']); // 40   (of notation)
+
+    // console.log(user.last name); // dot notation wont work if key has space
+    console.log(user['last name']);
+
+    let x = 'firstName';
+    console.log(user.x); // undefined
+    console.log(user[x]); // sachin
+
+    for (key in user) {
+        console.log(key + " ======= " + user[key]);
+    }
+</script>

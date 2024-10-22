@@ -1,0 +1,25 @@
+<script>
+    class Employee {
+        constructor(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+    }
+    Employee.prototype.comp = 'IBM';
+
+    let emp1 = new Employee(101, 'Shiva', 5000)
+    let emp2 = new Employee(102, 'Geeta', 6000)
+    console.log(emp1)
+    console.log(emp2)
+
+    // how to check if a property exists or not?
+    console.log(Object.hasOwn(emp1, 'salary')); // true
+    console.log('salary' in emp1); // true
+
+    console.log(Object.hasOwn(emp1, 'comp')); // false
+    console.log('comp' in emp1); // true 
+
+    console.log(Object.hasOwn(emp1, 'dob')); // false
+    console.log('dob' in emp1); // false
+</script>

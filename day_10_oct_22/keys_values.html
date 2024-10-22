@@ -1,0 +1,19 @@
+<script>
+    let user = {
+        'firstName': 'Sachin',
+        'last name': 'Tendulkar',
+        'age': 40,
+        'address': 'bangalore',
+    }
+    let allKeys = Object.keys(user); // array of key names
+    let allValues = Object.values(user); // array of values
+    let allEntries = Object.entries(user); // array of [[k1,v1],[k2,v2]]
+
+    console.log(allKeys)
+    console.log(allValues)
+    console.log(allEntries)
+
+    // convert array of entry to object
+    let userObj = Object.fromEntries(allEntries);
+    console.log(userObj)
+</script>
