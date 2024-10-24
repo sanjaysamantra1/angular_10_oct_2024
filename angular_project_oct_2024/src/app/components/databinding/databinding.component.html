@@ -1,0 +1,33 @@
+<h3 class="text-center">Databinding Component</h3>
+
+<div>1 way Binding:: {{myName}}</div>
+<div>1 way Binding:: <span [innerHTML]="myName"></span></div>
+<div>1 way Binding:: <span bind-innerHTML="myName"></span></div>
+<div>1 way Binding:: <input value="{{myName}}"></div>
+<div>1 way Binding:: <input [value]="myName"></div>
+<div>2 way Binding:: <input [(ngModel)]="myName"></div>
+<div>2 way Binding:: <input bindon-ngModel="myName"></div>
+
+<div>
+    Search Box:: 
+    <input type="search" placeholder="Search..." [(ngModel)]="searchText" (ngModelChange)="onSearchChange($event)">
+</div>
+<div>You are searching: {{searchText}}</div>
+
+<img src="{{img_url}}" width="200" height="250" />
+<img [src]="img_url" width="200" height="250" class="mx-2" />
+<img bind-src="img_url" width="200" height="250" /><br /><br />
+
+<div>Addition of {{a}} and {{b}} is {{a+b}}</div>
+<div>Addition of <span [innerHTML]="a"></span>
+    and <span [innerHTML]="b"></span> is
+    <span [innerHTML]="a+b"></span>
+</div>
+
+<button class="btn btn-primary" disabled="{{flag}}">Click Me</button>
+<button class="btn btn-primary mx-2" [disabled]="flag">Click Me</button>
+<button class="btn btn-primary" bind-disabled="flag">Click Me</button>
+
+<div>Event Binding:</div>
+<button class="btn btn-primary mx-2" (click)="f1()">Btn-1</button>
+<button class="btn btn-primary mx-2" on-click="f1()">Btn-2</button>
