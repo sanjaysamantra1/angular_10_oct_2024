@@ -26,4 +26,8 @@ export class DatabindingComponent {
   f1() {
     alert('I am f1...')
   }
+
+  addition(num1: any, num2: any) {
+    alert(`Addition of ${num1} & ${num2} is ${+num1 + +num2}`)
+  }
 }

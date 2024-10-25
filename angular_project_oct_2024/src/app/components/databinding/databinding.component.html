@@ -31,3 +31,8 @@
 <div>Event Binding:</div>
 <button class="btn btn-primary mx-2" (click)="f1()">Btn-1</button>
 <button class="btn btn-primary mx-2" on-click="f1()">Btn-2</button>
+
+<div>Template Reference Variable: </div>
+<input type="number" #num1 />   
+<input type="number" ref-num2 /> 
+<button (click)="addition(num1.value,num2.value)">Add</button>
