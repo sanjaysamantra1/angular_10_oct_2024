@@ -1,0 +1,12 @@
+.myClass1 {
+    background-color: blueviolet;
+    color: bisque;
+    padding: 5px;
+    border:5px dotted red;
+}
+.myClass2 {
+    background-color: yellowgreen;
+    color: orangered;
+    padding: 5px;
+    border:2px dashed green;
+}
