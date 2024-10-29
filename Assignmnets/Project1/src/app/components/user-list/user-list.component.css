@@ -1,0 +1,31 @@
+/* Add margin for the container */
+.container {
+    max-width: 900px;
+  }
+  
+  /* Card styles */
+  .card {
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  /* Table styles */
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table th,
+  .table td {
+    vertical-align: middle;
+  }
+  
