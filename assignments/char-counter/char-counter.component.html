@@ -1,0 +1,11 @@
+<div>
+    <textarea
+      [(ngModel)]="text"
+      (input)="updateCharCount()"
+      [maxLength]="maxLength"
+      rows="5"
+      cols="50"
+      placeholder="Type something... (Max 100 characters)"
+    ></textarea>
+    <p>{{ remainingChars }} characters remaining</p>
+  </div>
