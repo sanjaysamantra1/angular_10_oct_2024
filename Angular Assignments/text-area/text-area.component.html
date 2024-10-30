@@ -1,0 +1,9 @@
+<textarea
+  (input)="onTextAreaInput($event)"
+  maxlength=100
+  rows="4"
+  cols="30"
+  placeholder="Type here (max 100 characters)"
+></textarea>
+
+<p>Remaining characters: {{ remainingChars }}</p>

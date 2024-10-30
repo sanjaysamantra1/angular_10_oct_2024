@@ -1,0 +1,29 @@
+<h1>Simple Calculator</h1>
+
+<input type="number" [(ngModel)]="num1" placeholder="Enter first number" />
+<input type="number" [(ngModel)]="num2" placeholder="Enter second number" />
+
+<select [(ngModel)]="operation">
+  <option *ngFor="let op of operations" [value]="op">{{ op }}</option>
+</select>
+
+<button (click)="calculate()">Calculate</button>
+<div *ngIf="result !== null">
+  <p >Result: {{ result }}</p>
+
+</div>
+
+
+<!-- <h1>Simple Calculator</h1>
+
+<input type="number" [(ngModel)]="num1" placeholder="Enter first number" />
+<input type="number" [(ngModel)]="num2" placeholder="Enter second number" />
+
+<select [(ngModel)]="operation">
+  <option *ngFor="let op of operations" [value]="op">{{ op }}</option>
+</select>
+
+<button (click)="calculate()">Calculate</button>
+
+<p *ngIf="result !== null">
+  Result: {{ result }}</p> -->

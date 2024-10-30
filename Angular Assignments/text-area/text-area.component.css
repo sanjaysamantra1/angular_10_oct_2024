@@ -1,0 +1,15 @@
+h1 {
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+p {
+  font-size: 18px;
+}

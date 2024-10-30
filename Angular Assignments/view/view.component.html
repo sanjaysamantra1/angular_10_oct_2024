@@ -1,0 +1,35 @@
+<div style="text-align:center">
+  <h1>User List</h1>
+  <button (click)="toggleView()">
+    Switch to {{ isTableView ? 'Card' : 'Table' }} View
+  </button>
+
+  <div *ngIf="isTableView">
+    <table border="1" style="margin: 20px auto; width: 80%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="!isTableView" class="card-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="card" *ngFor="let user of users" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px; padding: 10px; width: 200px; text-align: center;">
+      <h2>{{ user.name }}</h2>
+      <p>Email: {{ user.email }}</p>
+      <p>Phone: {{ user.phone }}</p>
+    </div>
+  </div>
+</div>

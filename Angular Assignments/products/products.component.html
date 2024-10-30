@@ -1,0 +1,33 @@
+<div>
+  <h1>Product List</h1>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="searchProducts()"
+    placeholder="Search by title"
+  />
+
+  <button (click)="sortProducts('asc')">Sort Ascending</button>
+  <button (click)="sortProducts('desc')">Sort Descending</button>
+
+  <ul>
+    <li *ngFor="let product of paginatedProducts">
+      <img [src]="product.image" alt="{{ product.title }}" width="100">
+      <h2>{{ product.title }}</h2>
+      <p>Price: ${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating.rate }} ({{ product.rating.count }} reviews)</p>
+    </li>
+  </ul>
+
+  <div>
+    <button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      (click)="goToPage(i + 1)"
+      [disabled]="i + 1 === currentPage"
+    >
+      {{ i + 1 }}
+    </button>
+  </div>
+</div>
