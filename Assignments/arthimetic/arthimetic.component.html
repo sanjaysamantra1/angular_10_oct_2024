@@ -1,0 +1,17 @@
+<div>
+    <!-- Input boxes for numbers -->
+    <input type="number" [(ngModel)]="num1" placeholder="Enter first number">
+    <input type="number" [(ngModel)]="num2" placeholder="Enter second number">
+  
+    <!-- Dropdown menu for arithmetic operations -->
+    <select [(ngModel)]="selectedOperation" (change)="performOperation()">
+      <option value="add">+</option>
+      <option value="subtract">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+    </select>
+  
+    <!-- Display the result -->
+    <p>Result: {{ result }}</p>
+  </div>
+  

@@ -1,0 +1,29 @@
+<div class="center-container">
+    <p *ngIf="isButtonVisible">Today is the angular class</p>
+    <button class="btn btn-primary mx-2" (click)="toggleButtonVisibility()">{{isButtonVisible ? 'Hide' : 'show'}}</button>
+</div>
+
+<div class ="text-area">
+    <textarea 
+      id="inputText" 
+      maxlength="100" 
+      rows="3" 
+      cols="40" 
+      placeholder="Enter text here (Max 100 characters)..." 
+      (input)="updateRemainingCharacters($event)">
+    </textarea>
+    <p>Remaining characters: {{ remainingChars }}</p>
+  </div>
+  
+  <div>
+    <!-- Dropdown menu with state names -->
+    <select (change)="onStateChange($event)">
+      <option value="" disabled selected>Select a state</option>
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+    </select>
+  
+    <!-- Display the selected state -->
+    <p *ngIf="selectedState">Selected State: {{ selectedState }}</p>
+  </div>
+  
+  

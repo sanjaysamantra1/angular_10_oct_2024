@@ -1,0 +1,36 @@
+<div class="toggle-container">
+    <!-- Button to switch views -->
+    <button (click)="toggleView()">
+      Switch to {{ isTableView ? 'Card' : 'Table' }} View
+    </button>
+  </div>
+  
+  <!-- Table View -->
+  <div *ngIf="isTableView">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Card View -->
+  <div *ngIf="!isTableView" class="card-view">
+    <div *ngFor="let user of users" class="user-card">
+      <h3>{{ user.name }}</h3>
+      <p>Age: {{ user.age }}</p>
+      <p>Email: {{ user.email }}</p>
+    </div>
+  </div>
+  
