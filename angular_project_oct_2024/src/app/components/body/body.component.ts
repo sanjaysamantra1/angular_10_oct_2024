@@ -3,6 +3,7 @@ import { DatabindingComponent } from '../databinding/databinding.component';
 import { DirectiveComponent } from '../directive/directive.component';
 import { UserListComponent } from '../user-list/user-list.component';
 import { UsersComponent } from '../users/users.component';
+import { Demo1Component } from '../demo1/demo1.component';
 
 @Component({
   selector: 'app-body',
@@ -11,7 +12,8 @@ import { UsersComponent } from '../users/users.component';
     DatabindingComponent,
     DirectiveComponent,
     UserListComponent,
-    UsersComponent
+    UsersComponent,
+    Demo1Component
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

@@ -2,13 +2,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NumberonlyDirective } from '../../directives/numberonly.directive';
+import { HighlightDirective } from '../../directives/highlight.directive';
+import { BackbuttonDirective } from '../../directives/backbutton.directive';
+import { TooltipDirective } from '../../directives/tooltip.directive';
 
 @Component({
   selector: 'app-directive',
   standalone: true,
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    NumberonlyDirective,
+    HighlightDirective,
+    BackbuttonDirective,
+    TooltipDirective
 ],
   templateUrl: './directive.component.html',
   styleUrl: './directive.component.css'
