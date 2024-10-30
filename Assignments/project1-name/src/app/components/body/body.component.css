@@ -1,0 +1,75 @@
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(88, 146, 129, 0.872);
+    transition: box-shadow 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Specific button colors */
+  .btn-primary {
+    background-color: #007bff;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+  }
+  .btn-danger {
+    background-color: #dc3545;
+  }
+  
+  /* Input and textarea styling */
+  .input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  /* Animated paragraph */
+  .animated-paragraph {
+    animation: fadeIn 0.5s;
+  }
+  
+  /* Remaining characters counter styling */
+  .counter {
+    color: #555;
+    font-size: 0.9em;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
