@@ -1,0 +1,31 @@
+<div class="search-sort">
+    <input
+      type="text"
+      placeholder="Search by title..."
+      [(ngModel)]="searchTerm"
+    />
+    <button (click)="changeSortDirection()">
+      Sort by Title ({{ sortDirection }})
+    </button>
+  </div>
+  
+  <div class="product-list">
+    <div *ngFor="let product of filteredProducts" class="product-item">
+      <img [src]="product.image" alt="{{ product.title }}" />
+      <h3>{{ product.title }}</h3>
+      <p>Price: ${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <p>Rating: {{ product.rating.rate }} ({{ product.rating.count }} reviews)</p>
+    </div>
+  </div>
+  
+  <div class="pagination">
+    <button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      (click)="goToPage(i + 1)"
+      [class.active]="currentPage === i + 1"
+    >
+      {{ i + 1 }}
+    </button>
+  </div>
+  

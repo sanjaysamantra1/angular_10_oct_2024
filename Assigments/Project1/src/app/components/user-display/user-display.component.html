@@ -1,0 +1,43 @@
+<div>
+    <button (click)="toggleView()">
+      Toggle to {{ isCardView ? 'Table View' : 'Card View' }}
+    </button>
+  </div>
+  
+  <div *ngIf="isCardView; else tableView">
+    <div class="card-container">
+      <div *ngFor="let user of users" class="card">
+        <h3>{{ user.name }}</h3>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Company:</strong> {{ user.company.name }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #tableView>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Company</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.company.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+  

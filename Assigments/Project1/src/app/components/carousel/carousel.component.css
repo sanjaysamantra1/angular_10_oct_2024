@@ -1,0 +1,5 @@
+  .custom-size {
+    max-width: 100%; /* Set your desired width */
+    max-height: 400px; /* Set your desired height */
+    margin: 0 auto;    /* Center the image */
+  }

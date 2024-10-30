@@ -1,0 +1,10 @@
+<div>
+    <label for="state-select">Choose a state:</label>
+    <select id="state-select" (change)="onStateChange($event)">
+      <option value="" disabled selected>Select a state</option>
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+    </select>
+  </div>
+  
+  <p *ngIf="selectedState">Selected State: {{ selectedState }}</p>
+  

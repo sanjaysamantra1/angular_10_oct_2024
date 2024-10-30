@@ -1,0 +1,12 @@
+<div>
+    <label for="textArea">Enter text:</label>
+    <textarea
+      id="textArea"
+      [attr.maxLength]="maxLength"
+      rows="4"
+      cols="50"
+      (input)="onTextAreaInput($event)"
+    ></textarea>
+    <p>Remaining characters: {{ remainingChars }}</p>
+  </div>
+  
