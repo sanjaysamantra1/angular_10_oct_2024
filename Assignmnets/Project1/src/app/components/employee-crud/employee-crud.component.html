@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <!-- Add Employee Form -->
+  <h2>Add New Employee</h2>
+  <form (ngSubmit)="addEmployee()">
+    <div class="row">
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="newEmployee.name" name="name" placeholder="Name" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="newEmployee.position" name="position" placeholder="Position" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <input type="text" [(ngModel)]="newEmployee.department" name="department" placeholder="Department" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <button type="submit" class="btn btn-primary">Add Employee</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Employee Table -->
+  <h2 class="mt-4">Employee List</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let i = index">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.department }}</td>
+        <td>
+          <button class="btn btn-info" (click)="viewEmployeeDetails(employee)" data-bs-toggle="modal" data-bs-target="#employeeModal">
+            View
+          </button>
+          <button class="btn btn-danger" (click)="deleteEmployee(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Employee Details Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="employeeModalLabel">Employee Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" *ngIf="selectedEmployee">
+        <p><strong>ID:</strong> {{ selectedEmployee.id }}</p>
+        <p><strong>Name:</strong> {{ selectedEmployee.name }}</p>
+        <p><strong>Position:</strong> {{ selectedEmployee.position }}</p>
+        <p><strong>Department:</strong> {{ selectedEmployee.department }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
