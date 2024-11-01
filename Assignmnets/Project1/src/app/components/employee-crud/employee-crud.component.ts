@@ -17,7 +17,10 @@ export class EmployeeCrudComponent {
   employees = [
     { id: 1, name: 'John Doe', position: 'Developer', department: 'IT' },
     { id: 2, name: 'Jane Smith', position: 'Manager', department: 'HR' },
-    // Add more initial employees if needed
+    { id: 3, name: 'Bob Johnson', position: 'Designer', department: 'Design' },
+    { id: 4, name: 'Alice Brown', position: 'Analyst', department: 'Finance' },
+    { id: 5, name: 'David Lee', position: 'Developer', department: 'IT' },
+    { id: 6, name: 'Emily Wilson', position: 'Manager', department: 'HR' }
   ];
 
   newEmployee = { id: 0, name: '', position: '', department: '' };
