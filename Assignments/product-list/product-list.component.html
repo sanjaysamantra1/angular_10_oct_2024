@@ -1,0 +1,36 @@
+<div class="controls">
+    <!-- Search bar -->
+    <input
+      type="text"
+      placeholder="Search products..."
+      [(ngModel)]="searchQuery"
+      (input)="updateSearch(searchQuery)"
+    />
+  
+    <!-- Sort button -->
+    <button (click)="toggleSortOrder()">
+      Sort by Title: {{ sortOrder === 'asc' ? 'Ascending' : 'Descending' }}
+    </button>
+  </div>
+  
+  <!-- Product List -->
+  <div class="product-list">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+  </div>
+  
+  <!-- Pagination Controls -->
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button
+      (click)="nextPage()"
+      [disabled]="currentPage * itemsPerPage >= products.length"
+    >
+      Next
+    </button>
+  </div>
+  
