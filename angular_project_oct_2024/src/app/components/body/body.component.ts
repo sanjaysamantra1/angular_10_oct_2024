@@ -6,6 +6,7 @@ import { UsersComponent } from '../users/users.component';
 import { Demo1Component } from '../demo1/demo1.component';
 import { PipeComponent } from '../pipe/pipe.component';
 import { ParentComponent } from '../parent/parent.component';
+import { MyModalComponent } from '../my-modal/my-modal.component';
 
 @Component({
   selector: 'app-body',
@@ -17,7 +18,8 @@ import { ParentComponent } from '../parent/parent.component';
     UsersComponent,
     Demo1Component,
     PipeComponent,
-    ParentComponent
+    ParentComponent,
+    MyModalComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
