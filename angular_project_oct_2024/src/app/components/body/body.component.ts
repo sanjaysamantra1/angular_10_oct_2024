@@ -5,6 +5,7 @@ import { UserListComponent } from '../user-list/user-list.component';
 import { UsersComponent } from '../users/users.component';
 import { Demo1Component } from '../demo1/demo1.component';
 import { PipeComponent } from '../pipe/pipe.component';
+import { ParentComponent } from '../parent/parent.component';
 
 @Component({
   selector: 'app-body',
@@ -15,7 +16,8 @@ import { PipeComponent } from '../pipe/pipe.component';
     UserListComponent,
     UsersComponent,
     Demo1Component,
-    PipeComponent
+    PipeComponent,
+    ParentComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

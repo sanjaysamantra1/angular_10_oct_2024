@@ -1,0 +1,16 @@
+<div class="container border">
+    <div class="row">
+        <div class="text-center">This is Parent Component</div>
+        <div>my own data a is: {{a}}</div>
+        <div>my child comp data b is: {{child1.b}}</div>
+        <div>my child comp data name is: {{nameParent}}</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 border">
+            <app-child1 [aChild1]="a" #child1 (nameEvent)="receiveDataFromChild($event)"></app-child1>
+        </div>
+        <div class="col-sm-6 border">
+            <app-child2 [aChild2]="a" [b]="child1.b"></app-child2>
+        </div>
+    </div>
+</div>
