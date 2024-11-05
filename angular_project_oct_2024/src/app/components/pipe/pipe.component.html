@@ -1,0 +1,59 @@
+<h3 class="text-center">Pipes Demo</h3>
+
+<input type="text" [(ngModel)]="myName">
+<h4>Name is : {{myName}}</h4>
+<h4>Name is : {{myName | uppercase}}</h4>
+<h4>Name is : {{myName | lowercase}}</h4>
+<h4>Name is : {{myName | titlecase}}</h4>
+
+<input type="number" [(ngModel)]="sal">
+<h4>{{sal}}</h4>
+<h4>{{sal | currency}}</h4>
+<h4>{{sal | currency : 'INR'}}</h4>
+<!-- input | PipeName : argument1 : argument2 -->
+<h4>{{sal | currency : '&euro;'}}</h4>
+<h4>{{sal | currency : '&#20803;'}}</h4>
+
+<h4>{{today}}</h4>
+<h4>{{today | date}}</h4>
+<h4>{{today | date : 'shortDate'}}</h4>
+<h4>{{today | date : 'mediumDate'}}</h4>
+<h4>{{today | date : 'fullDate'}}</h4>
+<h4>{{today | date : 'shortTime'}}</h4>
+<h4>{{today | date : 'mediumTime'}}</h4>
+<h4>{{today | date : 'fullTime'}}</h4>
+<h4>{{today | date : 'dd/MMM/yyyy'}}</h4>
+<h4>{{today | date : 'dd-MMMM-yyyy'}}</h4>
+
+<!-- Pipe chaining -->
+<h4>{{today | date : 'dd-MMMM-yyyy' | uppercase}}</h4>
+<h4>{{today | date : 'dd-MMMM-yyyy' | lowercase}}</h4>
+
+-------------
+<h4>{{ 12.111222333 | number: "3.2-5" }}</h4>
+<h4>{{ 12.1 | number: "3.2-5" }}</h4>
+<p>{{0.5 | number:'3.2-5'}} </p>
+<p>{{0.5 | percent}} </p>
+
+<h4>{{user | json}}</h4>
+
+@for(entry of user | keyvalue;track $index){
+<h5>{{entry.key}}---{{entry.value}}</h5>
+}
+
+<h3>Custom Pipe: </h3>
+<textarea rows="2" cols="20" [(ngModel)]="msg1"></textarea>
+<p>Remaining chars: {{msg1 | remaining}}</p>
+<textarea rows="2" cols="20" [(ngModel)]="msg2"></textarea>
+<p>Remaining chars: {{msg2 | remaining : 200}}</p>
+
+<h3>Impure Pipe:</h3>
+
+<input #newNum />
+<button class="btn btn-success" (click)="arr.push(+newNum.value)">Add</button>
+
+<span>
+    @for(item of arr | mySort;track $index){
+        {{item}} &nbsp;
+    }
+</span>
