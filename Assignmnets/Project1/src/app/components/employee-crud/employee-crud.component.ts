@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './employee-crud.component.html',
   styleUrl: './employee-crud.component.css'

@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Employee Table</h1>
+  
+    <!-- Search Box -->
+    <input [(ngModel)]="searchText" placeholder="Search by name..." />
+  
+    <!-- Employee Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees | search: searchText">
+          <td>{{ employee.name | salutation: employee.gender }}</td>
+          <td>{{ employee.dob | age }}</td>
+          <td>{{ employee.designation }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
