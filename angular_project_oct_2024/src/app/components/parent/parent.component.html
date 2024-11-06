@@ -1,9 +1,13 @@
 <div class="container border">
     <div class="row">
-        <div class="text-center">This is Parent Component</div>
-        <div>my own data a is: {{a}}</div>
+        <div class="text-center" id="div1">This is Parent Component</div>
+        <div>
+            my own data a is: {{a}} 
+            <input type="number" [(ngModel)]="a">
+        </div>
         <div>my child comp data b is: {{child1.b}}</div>
         <div>my child comp data name is: {{nameParent}}</div>
+        <hr/>
     </div>
     <div class="row">
         <div class="col-sm-6 border">

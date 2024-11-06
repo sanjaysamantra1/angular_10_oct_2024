@@ -7,6 +7,8 @@ import { Demo1Component } from '../demo1/demo1.component';
 import { PipeComponent } from '../pipe/pipe.component';
 import { ParentComponent } from '../parent/parent.component';
 import { MyModalComponent } from '../my-modal/my-modal.component';
+import { TrafficComponent } from '../traffic/traffic.component';
+import { Demo2Component } from '../demo2/demo2.component';
 
 @Component({
   selector: 'app-body',
@@ -16,14 +18,16 @@ import { MyModalComponent } from '../my-modal/my-modal.component';
     DirectiveComponent,
     UserListComponent,
     UsersComponent,
-    Demo1Component,
     PipeComponent,
     ParentComponent,
-    MyModalComponent
+    MyModalComponent,
+    TrafficComponent,
+    Demo1Component,
+    Demo2Component
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
-
+  flag:boolean = true;
 }

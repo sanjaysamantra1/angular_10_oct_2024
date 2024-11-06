@@ -17,8 +17,15 @@ export class Demo1Component {
     Swal.fire('Good job!', 'You clicked the button!', 'success');
   }
   openSnackBar() {
-    new Snackbar('Helloooo, Good Morning', 
+    new Snackbar('Helloooo, Good Morning',
       { position: 'top-center', theme: 'dark', timeout: 3000 }
     );
+  }
+  timer: any;
+  constructor() {
+    this.timer = setInterval(console.log, 1000, 'HIiiiii-I am from Demo-1')
+  }
+  ngOnDestroy() {
+    clearInterval(this.timer)
   }
 }
