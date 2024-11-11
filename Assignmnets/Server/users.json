@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "age": 30
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "age": 25
+    },
+    {
+      "id": 3,
+      "name": "Sachin Tendulkar",
+      "email": "sachin@gmail.com",
+      "age": 48
+    },
+    {
+      "id": 4,
+      "name": "ms dhoni",
+      "email": "dhoni@csk.com",
+      "age": 45
+    }
+  ]
+}

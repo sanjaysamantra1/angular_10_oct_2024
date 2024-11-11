@@ -1,0 +1,14 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" type="text" required>
+    
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" required>
+    
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age" type="number" required>
+    
+    <button type="submit">{{ isEdit ? 'Update' : 'Add' }} User</button>
+    <button type="button" (click)="cancelEdit()" *ngIf="isEdit">Cancel</button>
+  </form>
+  
