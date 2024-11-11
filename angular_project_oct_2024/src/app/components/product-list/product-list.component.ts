@@ -10,14 +10,14 @@ import { response } from 'express';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  products:any;
+  products: any;
   constructor(private httpClient: HttpClient) {
   }
   ngOnInit() {
     const url = 'https://fakestoreapi.com/products'
-    this.httpClient.get(url).subscribe((response: any) => {
+    this.httpClient.get(url, { observe: 'response' }).subscribe((response: any) => {
       console.log(response);
-      this.products = response;
+      this.products = response.body;
     })
   }
 }

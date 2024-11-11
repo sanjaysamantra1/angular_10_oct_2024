@@ -5,25 +5,25 @@
         <div class="col-sm-6">
             <div class="text-center">Employee Table</div>
             @if(isLoading){
-               <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="">
+            <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="">
             }@else{
-                <table class="table table-bordered table-striped">
-                    <tbody>
-                        @for(emp of employees;track $index){
-                        <tr>
-                            <td>{{emp.id}}</td>
-                            <td>{{emp.eId}}</td>
-                            <td>{{emp.name}}</td>
-                            <td>{{emp.sal}}</td>
-                            <td>{{emp.gender}}</td>
-                            <td>
-                                <button class="btn btn-danger mx-1">Del</button>
-                                <button class="btn btn-secondary">Edit</button>
-                            </td>
-                        </tr>
-                        }
-                    </tbody>
-                </table>
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    @for(emp of employees;track $index){
+                    <tr>
+                        <td>{{emp.id}}</td>
+                        <td>{{emp.eId}}</td>
+                        <td>{{emp.getFullName()}}</td>
+                        <td>{{emp.getYearlySalary()}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>
+                            <button class="btn btn-danger mx-1">Del</button>
+                            <button class="btn btn-secondary">Edit</button>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
             }
         </div>
         <div class="col-sm-6">
