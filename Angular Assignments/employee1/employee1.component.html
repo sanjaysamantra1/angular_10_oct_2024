@@ -1,0 +1,37 @@
+<!-- employee1.component.html -->
+
+<nav class="navbar bg-primary" data-bs-theme="dark">
+  <!-- Navbar content -->
+</nav>
+
+<div>
+  <label for="filter">Filter:</label>
+  <select id="filter" [(ngModel)]="filterType" (change)="applyFilter()">
+    <option value="allEmployees">All Employees</option>
+    <option value="maleEmployees">Male Employees</option>
+    <option value="femaleEmployees">Female Employees</option>
+  </select>
+</div>
+
+<table *ngIf="filteredEmployees.length">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of filteredEmployees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>{{ employee.position }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="filteredEmployees.length === 0">
+  No employees found.
+</div>

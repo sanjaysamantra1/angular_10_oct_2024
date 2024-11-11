@@ -1,0 +1,59 @@
+<div class="container mt-3">
+  <h2>Employee CRUD</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.position }}</td>
+        <td>{{ employee.department }}</td>
+        <td>{{employee.Age}}</td>
+        <td>
+          <button class="btn btn-info" (click)="openModal(employee)">View</button>
+          <button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Add New Employee</h4>
+  <div>
+    <input [(ngModel)]="newEmployee.name" placeholder="Name" />
+    <input [(ngModel)]="newEmployee.position" placeholder="Position" />
+    <input [(ngModel)]="newEmployee.department" placeholder="Department" />
+    <input [(ngModel)]="newEmployee.Age" placeholder="Age"/>
+    <button class="btn btn-success" (click)="addEmployee()">Add Employee</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" role="dialog" *ngIf="selectedEmployee">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ selectedEmployee.name }} Details</h5>
+          <button type="button" class="close" (click)="selectedEmployee = null" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Position:</strong> {{ selectedEmployee.position }}</p>
+          <p><strong>Department:</strong> {{ selectedEmployee.department }}</p>
+          <p><strong>Age:</strong>{{selectedEmployee.Age}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="selectedEmployee = null">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div>
+  <input type="text" [(ngModel)]="searchTerm" placeholder="Search employees..." />
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <!-- <th>Birth Date</th> -->
+      <th>Age</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees | searchpipe: searchTerm">
+      <td>{{ employee.id | ordinal }}</td>
+      <td>{{ employee.name | salutation:employee.gender }}</td>
+      <td>{{ employee.birthDate | age }}</td>
+      <!-- <td>{{ employee.birthDate | age }}</td> -->
+      <td>{{ employee.position }}</td>
+    </tr>
+  </tbody>
+</table>
