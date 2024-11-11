@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Employee List</h2>
+  
+    <!-- Add Employee Form -->
+    <form (ngSubmit)="addEmployee()">
+      <input type="text" [(ngModel)]="newEmployee.name" name="name" placeholder="Name" required />
+      <input type="text" [(ngModel)]="newEmployee.position" name="position" placeholder="Position" required />
+      <input type="text" [(ngModel)]="newEmployee.department" name="department" placeholder="Department" required />
+      <button type="submit" class="btn btn-primary">Add Employee</button>
+    </form>
+  
+    <!-- Employee Table -->
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.position }}</td>
+          <td>{{ employee.department }}</td>
+          <td>
+            <button class="btn btn-info" (click)="viewEmployee(employee)" data-bs-toggle="modal" data-bs-target="#viewEmployeeModal">View</button>
+            <button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- View Employee Modal -->
+    <div class="modal fade" id="viewEmployeeModal" tabindex="-1" aria-labelledby="viewEmployeeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="viewEmployeeModalLabel">Employee Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" *ngIf="selectedEmployee">
+            <p><strong>Name:</strong> {{ selectedEmployee.name }}</p>
+            <p><strong>Position:</strong> {{ selectedEmployee.position }}</p>
+            <p><strong>Department:</strong> {{ selectedEmployee.department }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

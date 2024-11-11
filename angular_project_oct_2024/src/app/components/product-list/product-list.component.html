@@ -1,0 +1,29 @@
+<input
+  type="text"
+  [(ngModel)]="searchQuery"
+  placeholder="Search products..."
+  class="search-box"
+/>
+
+<!-- Sort button -->
+<button (click)="toggleSortDirection()">
+  Sort by Title ({{ sortDirection.toUpperCase() }})
+</button>
+
+<!-- Product list -->
+<div *ngFor="let product of filteredProducts" class="product-card">
+  <h3>{{ product.title }}</h3>
+  <p>{{ product.description }}</p>
+  <p>Price: ${{ product.price }}</p>
+</div>
+
+<!-- Pagination controls -->
+<div class="pagination">
+  <button
+    *ngFor="let page of [].constructor(totalPages); let i = index"
+    (click)="changePage(i + 1)"
+    [class.active]="currentPage === i + 1"
+  >
+    {{ i + 1 }}
+  </button>
+</div>

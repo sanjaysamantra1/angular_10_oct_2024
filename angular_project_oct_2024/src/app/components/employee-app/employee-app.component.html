@@ -1,0 +1,31 @@
+<div>
+    <label for="filter">Filter Employees: </label>
+    <select id="filter" (change)="onFilterChange($event)">
+      <option value="allEmployees">All Employees</option>
+      <option value="male">Male Employees</option>
+      <option value="female">Female Employees</option>
+    </select>
+  </div>
+  
+  <div *ngIf="filteredEmployees.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of filteredEmployees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.gender }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="filteredEmployees.length === 0">
+    <p>No employees to display.</p>
+  </div>
