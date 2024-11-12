@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -9,10 +10,16 @@ interface Product {
   price: number;
 
 }
+=======
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { response } from 'express';
+>>>>>>> e869076cb2add4379d4b28d9d144d2ff771d8377
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
+<<<<<<< HEAD
   imports: [FormsModule, CommonModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -83,3 +90,21 @@ interface Product {
   }
 
 
+=======
+  imports: [],
+  templateUrl: './product-list.component.html',
+  styleUrl: './product-list.component.css'
+})
+export class ProductListComponent {
+  products: any;
+  constructor(private httpClient: HttpClient) {
+  }
+  ngOnInit() {
+    const url = 'https://fakestoreapi.com/products'
+    this.httpClient.get(url, { observe: 'response' }).subscribe((response: any) => {
+      console.log(response);
+      this.products = response.body;
+    })
+  }
+}
+>>>>>>> e869076cb2add4379d4b28d9d144d2ff771d8377

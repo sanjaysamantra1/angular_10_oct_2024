@@ -7,6 +7,7 @@ import { Directive, HostListener } from '@angular/core';
 })
 export class BackbuttonDirective {
 
+  // Dependency Injection (Injecting a service into a component/directive)
   constructor(private location: Location) { }
 
   @HostListener('click')

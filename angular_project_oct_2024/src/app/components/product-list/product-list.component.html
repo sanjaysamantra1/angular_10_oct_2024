@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <input
   type="text"
   [(ngModel)]="searchQuery"
@@ -26,4 +27,25 @@
   >
     {{ i + 1 }}
   </button>
+=======
+<h3 class="text-center">Product List</h3>
+<div class="container">
+    <div class="row">
+        @for(product of products;track $index){
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="{{product.image}}" class="card-img-top" alt="..." height="200">
+                    <div class="card-body text-center">
+                        <h5 class="card-title text-truncate">{{product.category}}</h5>
+                        <p class="card-text">{{product.title}}</p>
+                        <p class="card-text text-truncate">{{product.description}}</p>
+                        <p class="card-text">{{product.rating.rate}}</p>
+                        <p class="card-text">{{product.price}}</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+>>>>>>> e869076cb2add4379d4b28d9d144d2ff771d8377
 </div>
