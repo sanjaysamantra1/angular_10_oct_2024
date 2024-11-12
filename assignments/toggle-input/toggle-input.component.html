@@ -1,0 +1,6 @@
+<div>
+    <input [type]="isPassword ? 'password' : 'text'" [(ngModel)]="inputValue" placeholder="Enter text" />
+    <button (click)="togglePasswordVisibility()">
+      {{ isPassword ? 'Show' : 'Hide' }}
+    </button>
+  </div>
