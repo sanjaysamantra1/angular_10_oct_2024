@@ -11,6 +11,7 @@ import { InputBoxComponent } from './components/input-box/input-box.component';
 import { CounterFunctionComponent } from './components/counter-function/counter-function.component';
 import { UserDisplayComponent } from './components/user-display/user-display.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { EmployeeComponent } from './components/employee/employee.component';
  
 @Component({
   selector: 'app-root',
@@ -27,7 +28,8 @@ import { ProductsListComponent } from './components/products-list/products-list.
     InputBoxComponent,
     CounterFunctionComponent,
     UserDisplayComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    EmployeeComponent
      
     ],
   templateUrl: './app.component.html',
