@@ -1,0 +1,7 @@
+<h3>Todo List</h3>
+@for (todo of todos$ | async; track $index) {
+  <div>
+    {{ todo.id }} {{ todo.value }}
+    <button (click)="deleteTodo(todo.id)">x</button>
+  </div>
+}

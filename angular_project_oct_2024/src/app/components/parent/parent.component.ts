@@ -2,17 +2,16 @@ import { Component, KeyValueDiffer, KeyValueDiffers } from '@angular/core';
 import { Child1Component } from '../child1/child1.component';
 import { Child2Component } from '../child2/child2.component';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-parent',
   standalone: true,
   imports: [
     FormsModule,
-    CommonModule,
     Child1Component,
     Child2Component
-  ],
+],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.css'
 })
