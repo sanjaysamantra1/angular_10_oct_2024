@@ -1,0 +1,38 @@
+<h3 class="text-center">Signal Demo</h3>
+<div class="border">
+    <h4>Num value is {{num()}}</h4>
+    <h4>Double value is {{numDouble()}}</h4>
+    <h4>Square value is {{numSquare()}}</h4>
+    <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()" class="m-1">Reset</button>
+    <button (click)="increment()">Increment</button>
+    <hr />
+    @for(msg of messages();track $index){
+    <div>{{msg}}</div>
+    }
+</div>
+
+<h3>User Details</h3>
+<div>
+    Current userid :: {{userId()}}
+    <button (click)="incrementUserId()">Increment</button>
+    <button (click)="destroyEffect()">destroy effect</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{userData?.username}}</h5>
+                    <p class="card-text">{{userData?.name}}</p>
+                    <p class="card-text">{{userData?.email}}</p>
+                    <p class="card-text">{{userData?.address.city}}</p>
+                    <p class="card-text">{{userData?.phone}}</p>
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

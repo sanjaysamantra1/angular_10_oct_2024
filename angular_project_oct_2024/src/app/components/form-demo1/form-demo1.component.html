@@ -1,0 +1,28 @@
+<form #myForm="ngForm" (submit)="submitMyForm(myForm)">
+    <div>
+        first name : <input name="firstName" ngModel />
+    </div>
+    <div>
+        Last name : <input name="lastName" ngModel />
+    </div>
+    <div>
+        Email : <input name="email" ngModel />
+    </div>
+    <div ngModelGroup="address">
+        <div>
+            city : <input name="city" ngModel />
+        </div>
+        <div>
+            state : <input name="state" ngModel />
+        </div>
+        <div>
+            pin : <input name="pin" ngModel />
+        </div>
+    </div>
+    <input type="submit" value="submit">
+    <input type="reset" value="clear">
+</form>
+
+<pre>
+    {{myForm.value | json}}
+</pre>
