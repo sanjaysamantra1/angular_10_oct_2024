@@ -10,6 +10,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './form-demo1.component.css'
 })
 export class FormDemo1Component {
+  user = {
+    "firstName": "sach",
+    "lastName": "Tendulkar",
+    "email": "",
+    "address": {
+      "city": "",
+      "state": "",
+      "pin": ""
+    }
+  }
   submitMyForm(myForm: any) {
     console.log(myForm);
     console.log(myForm.value);

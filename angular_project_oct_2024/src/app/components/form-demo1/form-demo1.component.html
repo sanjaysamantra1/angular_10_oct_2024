@@ -1,28 +1,31 @@
 <form #myForm="ngForm" (submit)="submitMyForm(myForm)">
     <div>
-        first name : <input name="firstName" ngModel />
+        first name : <input name="firstName" #fname="ngModel" [(ngModel)]="user.firstName" 
+        required minlength="5" />
+        <span class="text-danger" *ngIf="fname.dirty && fname.hasError('required')">FirstName is Required</span>
+        <span class="text-danger" *ngIf="fname.dirty && fname.hasError('minlength')">minimum 5 chars required</span>
     </div>
     <div>
-        Last name : <input name="lastName" ngModel />
+        Last name : <input name="lastName" ngModel #lname="ngModel" [(ngModel)]="user.lastName" />
     </div>
     <div>
-        Email : <input name="email" ngModel />
+        Email : <input name="email" ngModel [(ngModel)]="user.email" />
     </div>
     <div ngModelGroup="address">
         <div>
-            city : <input name="city" ngModel />
+            city : <input name="city" ngModel [(ngModel)]="user.address.city" />
         </div>
         <div>
-            state : <input name="state" ngModel />
+            state : <input name="state" ngModel [(ngModel)]="user.address.state" />
         </div>
         <div>
-            pin : <input name="pin" ngModel />
+            pin : <input name="pin" ngModel [(ngModel)]="user.address.pin" />
         </div>
     </div>
-    <input type="submit" value="submit">
-    <input type="reset" value="clear">
+    <input type="submit" value="submit" [disabled]="myForm.invalid">
+    <input type="reset" value="clear" class="mx-1">
 </form>
 
 <pre>
-    {{myForm.value | json}}
+    {{myForm.value | json}} --{{fname.value}}
 </pre>

@@ -25,6 +25,8 @@ import { TodoListComponent } from '../todo-list/todo-list.component';
 import { TodoAddComponent } from '../todo-add/todo-add.component';
 import { SignalDemo1Component } from '../signal-demo1/signal-demo1.component';
 import { FormDemo1Component } from '../form-demo1/form-demo1.component';
+import { FormDemo2Component } from '../form-demo2/form-demo2.component';
+import { FormDemo3Component } from '../form-demo3/form-demo3.component';
 
 @Component({
   selector: 'app-body',
@@ -55,7 +57,9 @@ import { FormDemo1Component } from '../form-demo1/form-demo1.component';
     TodoListComponent,
     TodoAddComponent,
     SignalDemo1Component,
-    FormDemo1Component
+    FormDemo1Component,
+    FormDemo2Component,
+    FormDemo3Component
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
