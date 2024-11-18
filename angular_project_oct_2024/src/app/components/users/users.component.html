@@ -7,11 +7,12 @@
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" class="card-img-top" alt="...">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{user.username}}</h5>
+                        <p class="card-text">{{user.id}}</p>
                         <p class="card-text">{{user.name}}</p>
                         <p class="card-text">{{user.email}}</p>
                         <p class="card-text">{{user.address.city}}</p>
                         <p class="card-text">{{user.phone}}</p>
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <a href="#" class="btn btn-primary" [routerLink]="['/userdetails', user.id]">Details</a>
                     </div>
                 </div>
             </div>
