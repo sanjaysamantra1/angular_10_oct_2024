@@ -1,0 +1,173 @@
+<h1>Employee List</h1>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">EID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Gender</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; let id = index">
+        <td>{{ employee.eId }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.sal }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="onDeleteClick(id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  View
+</button>
+
+<!-- Button trigger modal -->
+<button
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  Add Employee
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="eid">Eid:</label>
+            <input
+              [(ngModel)]="eId"
+              type="number"
+              class="form-control"
+              id="eid"
+              name="eid"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              [(ngModel)]="name"
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input
+              [(ngModel)]="sal"
+              type="number"
+              class="form-control"
+              id="salary"
+              name="salary"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select
+              class="form-control"
+              id="gender"
+              name="gender"
+              required
+              [(ngModel)]="gender"
+            >
+              <option value="" disabled selected>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <button
+            (click)="onSaveEmployee()"
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">...</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->

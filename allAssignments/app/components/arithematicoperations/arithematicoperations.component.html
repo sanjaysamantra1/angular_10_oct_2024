@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <!-- Input Fields Section -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="num1" class="form-label">Number 1</label>
+      <input
+        type="number"
+        id="num1"
+        [(ngModel)]="number1"
+        class="form-control"
+        placeholder="Enter first number"
+      />
+    </div>
+    <div class="col-md-6">
+      <label for="num2" class="form-label">Number 2</label>
+      <input
+        type="number"
+        id="num2"
+        [(ngModel)]="number2"
+        class="form-control"
+        placeholder="Enter second number"
+      />
+    </div>
+  </div>
+
+  <!-- Dropdown for Arithmetic Operations -->
+  <div class="dropdown mb-3">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Select Operation
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" (click)="onPerformOperation('+')">+</a></li>
+      <li><a class="dropdown-item" (click)="onPerformOperation('-')">-</a></li>
+      <li><a class="dropdown-item" (click)="onPerformOperation('*')">*</a></li>
+      <li><a class="dropdown-item" (click)="onPerformOperation('/')">/</a></li>
+    </ul>
+  </div>
+
+  <!-- Displaying Result -->
+  <div class="alert alert-info">
+    <strong>Result:</strong> {{ result != null ? result : "N/A" }}
+  </div>
+</div>

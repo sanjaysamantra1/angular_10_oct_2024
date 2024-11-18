@@ -1,0 +1,16 @@
+.counter-container {
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.display-4 {
+  color: #343a40; /* Dark text color */
+}
+
+.btn-group button {
+  margin: 0 5px;
+  font-size: 1.25rem;
+}

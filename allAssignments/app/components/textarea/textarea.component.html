@@ -1,0 +1,15 @@
+<!-- Create a text-area with maxLength=100, as the user keeps typing display updated
+Remaining characters. -->
+<div class="form-floating">
+  <textarea
+    class="form-control"
+    placeholder="Leave a comment here"
+    id="floatingTextarea2"
+    style="height: 100px"
+    maxlength="100"
+    [(ngModel)]="inputString"
+    (keydown)="onCharacterPress()"
+  ></textarea>
+  <span>Remaning characters: {{ maximumLength }}</span>
+  <label for="floatingTextarea2"></label>
+</div>

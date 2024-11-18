@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Full Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstName }} {{ user.lastName }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item" (click)="usersFilter('all')">Everyone</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="usersFilter('male')">Male</a>
+    </li>
+    <li>
+      <a class="dropdown-item" (click)="usersFilter('female')">Female</a>
+    </li>
+  </ul>
+</div>

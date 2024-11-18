@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="text-center my-4">Card View</h1>
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let employee of employees">
+      <div class="card shadow-sm" style="width: 18rem">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>EID:</b> {{ employee.eId }}</li>
+          <li class="list-group-item"><b>NAME:</b> {{ employee.name }}</li>
+          <li class="list-group-item"><b>SALARY:</b> {{ employee.sal }}</li>
+          <li class="list-group-item"><b>GENDER:</b> {{ employee.gender }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

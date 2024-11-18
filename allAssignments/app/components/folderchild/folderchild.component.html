@@ -1,0 +1,15 @@
+<div>
+  <ul>
+    <li *ngFor="let item of folder.items">
+      <div *ngIf="item.isFolder; else file">
+        <button (click)="toggle(item)">📁 {{ item.name }}</button>
+        <div *ngIf="item.expand">
+          <app-folderchild [folder]="item"></app-folderchild>
+        </div>
+      </div>
+      <ng-template #file>
+        <span> 📄 {{ item.name }}</span>
+      </ng-template>
+    </li>
+  </ul>
+</div>

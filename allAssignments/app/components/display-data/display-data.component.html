@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Ticker Symbol</th>
+      <th scope="col">Trading Date</th>
+      <th scope="col">Open Price</th>
+      <th scope="col">High Price</th>
+      <th scope="col">Low Price</th>
+      <th scope="col">Close Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of data; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ stock.ticker_symbol }}</td>
+      <td>{{ changeDate(stock.trading_date) }}</td>
+      <td>{{ stock.open_price }}</td>
+      <td>{{ stock.high_price }}</td>
+      <td>{{ stock.low_price }}</td>
+      <td>{{ stock.close_price }}</td>
+    </tr>
+  </tbody>
+</table>

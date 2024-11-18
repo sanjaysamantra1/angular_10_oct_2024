@@ -1,0 +1,25 @@
+<h1 class="text-center my-4">Employee Details</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Eid</th>
+      <th scope="col">Name</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Gender</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees; let i = index">
+      <td>{{ employee.eId }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.sal }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>
+        <button (click)="onClickDelete(i)" class="btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

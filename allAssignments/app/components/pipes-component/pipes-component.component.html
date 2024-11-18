@@ -1,0 +1,49 @@
+<div class="container my-4">
+  <!-- Search Form -->
+  <div class="form-group">
+    <label for="search">Search: </label>
+    <input type="text" id="search" class="form-control" [(ngModel)]="search" />
+    <button class="btn btn-primary mt-2">Search</button>
+  </div>
+
+  <!-- Employees Table -->
+  <table class="table table-bordered table-hover mt-4">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">EID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees | searchemployee : search">
+        <td>{{ employee.eId }}</td>
+        <td>
+          {{ employee.name | salutation : employee.gender }}
+        </td>
+        <td>{{ employee.sal }}</td>
+        <td>{{ employee.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Date of Birth Input -->
+  <div class="form-group mt-4">
+    <label for="DOB">Date Of Birth (Year): </label>
+    <input type="text" id="DOB" class="form-control" [(ngModel)]="DOB" />
+    <h5 class="mt-2">Age: {{ DOB | age }}</h5>
+  </div>
+
+  <!-- Ordinal Input -->
+  <div class="form-group mt-4">
+    <label for="ordinal">Ordinal: </label>
+    <input
+      type="text"
+      id="ordinal"
+      class="form-control"
+      [(ngModel)]="ordinal"
+    />
+    <h5 class="mt-2">Ordinal: {{ ordinal | ordinalpipe }}</h5>
+  </div>
+</div>

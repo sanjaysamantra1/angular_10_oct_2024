@@ -1,0 +1,26 @@
+<div
+  class="container d-flex flex-column justify-content-center align-items-center vh-10"
+>
+  <div class="form-check form-switch mb-3">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      role="switch"
+      id="flexSwitchCheckChecked"
+      (change)="onChangeToggle()"
+      checked
+    />
+    <label class="form-check-label" for="flexSwitchCheckChecked">Toggle</label>
+  </div>
+
+  <div *ngIf="isEnabled" class="text-center">
+    <p class="mt-3 bg-light border rounded p-3 shadow-sm" style="width: 300px">
+      Hi, this is a paragraph!
+    </p>
+  </div>
+  <!-- <div *ngIf="!toggleOn; else elseBlock">
+    <h2>Hello</h2>
+    <p>Good morning to you</p>
+  </div>
+  <ng-template #elseBlock>No greeting, Lagbaja nothing for you.</ng-template> -->
+</div>

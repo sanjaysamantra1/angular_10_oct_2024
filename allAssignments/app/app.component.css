@@ -1,0 +1,7 @@
+/* styles.css (or component-specific CSS) */
+app-navbar,
+app-categories,
+app-carousel {
+  display: block; /* Ensures they act as block elements */
+  margin-bottom: 20px; /* Adds space below each component */
+}

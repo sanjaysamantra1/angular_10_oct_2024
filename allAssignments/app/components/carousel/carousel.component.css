@@ -1,0 +1,4 @@
+.carousel-inner img {
+  height: 200px; /* Set desired height */
+  object-fit: cover; /* Ensures the image fills the height without distortion */
+}

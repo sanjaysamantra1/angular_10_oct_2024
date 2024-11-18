@@ -1,0 +1,31 @@
+<div
+  class="parent-container d-flex justify-content-center align-items-center"
+  style="height: 400px"
+>
+  <div class="counter-container d-flex flex-column align-items-center">
+    <span class="display-4 font-weight-bold mb-4">{{ num }}</span>
+    <div class="btn-group" role="group" aria-label="Counter Controls">
+      <button
+        type="button"
+        class="btn btn-danger px-4 py-2"
+        (click)="onDecrement()"
+      >
+        <strong>-</strong>
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary px-4 py-2"
+        (click)="onReset()"
+      >
+        <strong>RESET</strong>
+      </button>
+      <button
+        type="button"
+        class="btn btn-success px-4 py-2"
+        (click)="onIncrement()"
+      >
+        <strong>+</strong>
+      </button>
+    </div>
+  </div>
+</div>

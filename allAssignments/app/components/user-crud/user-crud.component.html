@@ -1,0 +1,6 @@
+<app-user-table
+  [employees]="employees"
+  (myEvent)="getDeleteIndex($event)"
+></app-user-table>
+<app-user-card [employees]="employees"></app-user-card>
+<app-user-add (myEvent1)="getNewUser($event)"></app-user-add>
