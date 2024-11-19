@@ -15,11 +15,14 @@ export class UserDetailsComponent {
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) {
   }
   ngOnInit() {
-    this.activatedRoute.params.subscribe(params => {
-      const userId = params['id']; // '2'
-      this.http.get(`https://jsonplaceholder.typicode.com/users/${userId}`).subscribe(userData => {
-        this.user = userData;
-      })
-    });
+    // this.activatedRoute.params.subscribe(params => {
+    //   const userId = params['id']; // '2'
+    //   this.http.get(`https://jsonplaceholder.typicode.com/users/${userId}`).subscribe(userData => {
+    //     this.user = userData;
+    //   })
+    // });
+    this.activatedRoute.data.subscribe((resolverData:any) => {
+      this.user = resolverData.user;
+    })
   }
 }

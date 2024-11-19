@@ -1,1 +1,17 @@
-<p>contactus works!</p>
+<h3 class="text-center">Contact Us Component</h3>
+
+<form name="myForm1" #myForm="ngForm" (submit)="submitMyForm(myForm.value)">
+    name:
+    <input name="name" #name="ngModel" [(ngModel)]="user.name"/>
+    <span *ngIf="name.hasError('required') && name.dirty" class="text-danger">Name is required</span>
+    <span *ngIf="name.hasError('pattern') && name.dirty" class="text-danger">Only alphabets allowed</span>
+    <br><br>
+    age:
+    <input name="age" #age="ngModel" [(ngModel)]="user.age"  />
+    <span *ngIf="age.hasError('required') && age.dirty" class="text-danger">Age is required</span>
+    <span *ngIf="age.hasError('pattern') && age.dirty" class="text-danger">Only Numbers allowed</span>
+    <br><br>
+
+    <input type="submit" [disabled]="myForm.invalid" />
+
+</form>
