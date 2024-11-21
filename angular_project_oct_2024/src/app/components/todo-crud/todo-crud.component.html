@@ -1,0 +1,11 @@
+<p>todo-crud works!</p>
+
+<ol>
+    @for(todo of todoArr;track $index){
+    <li class="my-2">
+        <span [ngClass]="{'strikethrough': todo.isCompleted}">{{todo.text}} &nbsp; {{todo.isCompleted}} &nbsp;</span>
+        <button class="btn btn-danger" (click)="deleteMyTodo(todo.id)">Delete</button>
+        <button class="btn btn-secondary mx-1" (click)="toggleMyTodo(todo.id)">Toggle</button>
+    </li>
+    }
+</ol>
