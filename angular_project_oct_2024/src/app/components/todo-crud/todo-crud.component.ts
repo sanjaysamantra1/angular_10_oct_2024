@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { deleteTodo, toggleTodo } from '../../ngrx/actions/todo.actions';
-
 @Component({
   selector: 'app-todo-crud',
   standalone: true,
@@ -12,7 +11,6 @@ import { deleteTodo, toggleTodo } from '../../ngrx/actions/todo.actions';
 })
 export class TodoCrudComponent {
   todoArr: any;
-
   constructor(private store: Store<any>) {
     this.store.select('todoArr').subscribe(storeData => {
       this.todoArr = storeData;

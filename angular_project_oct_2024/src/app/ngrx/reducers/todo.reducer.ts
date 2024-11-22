@@ -1,6 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
 import { addTodo, deleteTodo, toggleTodo } from '../actions/todo.actions';
-
 export const initialState = [
     { id: 1, text: 'Learn javascript', isCompleted: true },
     { id: 2, text: 'Go to Gym', isCompleted: false },
