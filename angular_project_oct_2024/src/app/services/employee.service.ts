@@ -22,16 +22,19 @@ export class EmployeeService {
       })
     );
   }
+  fetchAllEmployees(): Observable<Employee[]> {
+    return this.httpClient.get<Employee[]>(this.api_url)
+  }
   getOneEmployee(id: number) {
-    return this.httpClient.get(`this.api_url/${id}`);
+    return this.httpClient.get(`${this.api_url}/${id}`);
   }
   addEmployee(newEmp: any) {
     return this.httpClient.post(this.api_url, newEmp);
   }
   updateEmployee(id: number, payload: any) {
-    return this.httpClient.patch(`this.api_url/${id}`, payload);
+    return this.httpClient.patch(`${this.api_url}/${id}`, payload);
   }
   deleteEmployee(id: number) {
-    return this.httpClient.delete(`this.api_url/${id}`);
+    return this.httpClient.delete(`${this.api_url}/${id}`);
   }
 }

@@ -9,6 +9,9 @@ import { errorInterceptor } from './interceptors/error.interceptor';
 import { provideStore } from '@ngrx/store';
 import { counterReducer } from './ngrx/reducers/counter.reducer';
 import { todoReducer } from './ngrx/reducers/todo.reducer';
+import { provideEffects } from '@ngrx/effects';
+import { employeesReducer } from './ngrx/reducers/employee.reducer';
+import { EmployeeEffects } from './ngrx/effects/employee.effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +22,11 @@ export const appConfig: ApplicationConfig = {
       retryInterceptor,
       errorInterceptor
     ])),
-    provideStore({ count: counterReducer,todoArr:todoReducer }) // provideStore(StoreObject)
+    provideStore({
+      count: counterReducer,
+      todoArr: todoReducer,
+      employees: employeesReducer
+    }),
+    provideEffects(EmployeeEffects)
   ]
 };

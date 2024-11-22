@@ -1,0 +1,17 @@
+<p>employee-list works!</p>
+
+<table class="table table-bordered table-striped">
+    <tbody>
+        @for(emp of employees$ |async;track $index){
+        <tr>
+            <td>{{emp.firstName}}</td>
+            <td>{{emp.lastName}}</td>
+            <td>{{emp.sal}}</td>
+            <td>{{emp.gender}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="deleteMyEmp(emp.id)">Del</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
