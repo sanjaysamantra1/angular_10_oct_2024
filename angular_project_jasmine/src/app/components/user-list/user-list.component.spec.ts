@@ -4,7 +4,6 @@ import { UserListComponent } from './user-list.component';
 import { provideHttpClient } from '@angular/common/http';
 import { UserService } from '../../services/user.service';
 import { of } from 'rxjs';
-import { inject } from '@angular/core';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;

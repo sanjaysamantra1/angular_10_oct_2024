@@ -26,14 +26,14 @@ describe('UserService', () => {
     expect(service).toBeTruthy();
   });
   it('should fetch data using GET request', () => {
-    // const mockUsers = [{ id: 1, name: 'aaa', sal: 5000 }]
-    // service.getAllUsers().subscribe((data) => {
-    //   expect(data).toEqual(mockUsers);
-    // });
+    const mockUsers = [{ id: 1, name: 'aaa', sal: 5000 }]
+    service.getAllUsers().subscribe((data) => {
+      expect(data).toEqual(mockUsers);
+    });
     // Expect the GET request
-    // const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/users');
-    // expect(req.request.method).toBe('GET');
-    // // Respond with mock data
-    // req.flush(mockUsers);
+    const req = httpTestingController.expectOne('https://jsonplaceholder.typicode.com/users');
+    expect(req.request.method).toBe('GET');
+    // Respond with mock data
+    req.flush(mockUsers);
   });
 });
